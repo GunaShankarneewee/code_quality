@@ -33,17 +33,6 @@ query_classifier_agent = Agent(
     debug_mode=True
 )
 
-def classify_query(user_query: str) -> str:
-    """
-    Determines the most suitable agent for the given query.
-    """
-    response_stream: Iterator[RunResponse] = query_classifier_agent.run(
-        f"Classify the query '{user_query}' into Web Agent, Code Review Agent, or Quantization Agent.",
-        stream=True,
-        messages=True
-    )
-    extracted_text = "".join([message.content for response in response_stream for message in response.messages if isinstance(message.content, str)])
-    return preprocess_text(extracted_text)
 
 def route_query(user_query: str) -> str:
     """
