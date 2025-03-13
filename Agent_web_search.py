@@ -30,3 +30,35 @@ web_search_agent = Agent(
     markdown=True,
     debug_mode=True
 )
+
+# Define Agents
+web_search_agent = Agent(
+    name="Web Agent",
+    description="Searches the web for general information.",
+    model=Groq(id="llama-3.3-70b-versatile"),
+    tools=[DuckDuckGo()],
+    instructions="Always include the source.",
+    show_tool_calls=True,
+    markdown=True,
+    debug_mode=True
+)# Define Agents
+web_search_agent = Agent(
+    name="Web Agent",
+    description="Searches the web for general information.",
+    model=Groq(id="llama-3.3-70b-versatile"),
+    tools=[DuckDuckGo()],
+    instructions="Always include the source.",
+    show_tool_calls=True,
+    markdown=True,
+    debug_mode=True
+)# Define Agents
+web_search_agent = Agent(
+    name="Web Agent",
+    description="Searches the web for general information.",
+    model=Groq(id="llama-3.3-70b-versatile"),
+    tools=[DuckDuckGo()],
+    instructions="Always include the source.",
+    show_tool_calls=True,
+    markdown=True,
+    debug_mode=True
+)
